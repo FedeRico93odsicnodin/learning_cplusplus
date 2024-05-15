@@ -1,8 +1,9 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
-#include "Typeof.h"
+#include "topics/namespaces_tutorial.h"
 using namespace std;
+
 
 // object definition for the number and the single label
 struct label_tutorial {
@@ -21,12 +22,34 @@ int find_arr_labels_length() {
 	return arr_len;
 }
 
+
 // verification of the presence of the selection inside the array 
 bool selection_presence(int selected_num, vector<int> all_selections) {
 	if (find(all_selections.begin(), all_selections.end(), selected_num) != all_selections.end()) {
 		return true;
 	}
 	return false;
+}
+
+// the switch for the selected tutorial 
+void tutorial_selector(int selection) {
+	vector<string> all_descriptions;
+	switch(selection) {
+		case 1: {
+			using namespace namespaces_tutorial;
+			cout << tutorial_title << "\n";
+			cout << tutorial_descrition << "\n";
+			all_descriptions = fill_vector_with_demo_descriptions();
+			break;
+		}
+	}
+	cout << "\n\n----------\n\n";
+	cin.ignore();
+	for(int ind_descr = 0; ind_descr < all_descriptions.size(); ind_descr++ ) {
+		string curr_description = all_descriptions[ind_descr];
+		cout << curr_description << "\n";
+		cin.ignore();
+	}
 }
 
 int main() {
@@ -48,6 +71,7 @@ int main() {
 			cout << "GOODBYE!!!";
 			break;
 		}
+		tutorial_selector(topic_selection);
 	} while (topic_selection != 0);
 	
 	return 0;
