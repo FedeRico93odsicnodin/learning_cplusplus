@@ -30,6 +30,8 @@ bool selection_presence(int selected_num, vector<int> all_selections) {
 }
 
 int main() {
+	// first comment on vscode
+
 	// the selection for the particular tutorial to follow 
 	int topic_selection = 0;
 	vector<int> all_possible_selections;
