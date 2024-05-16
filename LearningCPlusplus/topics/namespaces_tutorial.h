@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 
-std::vector<std::string> fill_vector_with_demo_descriptions() {
+std::vector<std::string> namespaces_descriptor_tutorial() {
     std::vector<std::string> all_descriptions;
     all_descriptions.push_back("1. consider namespaces first and second with each respectively x = 1 and x = 2");
     all_descriptions.push_back("2. if in the main I declare the same variable x = 3 without specifing namespace, it will be printed as default");
