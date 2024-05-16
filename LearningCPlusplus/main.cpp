@@ -3,6 +3,7 @@
 #include <algorithm>
 #include "topics/namespaces_tutorial.h"
 #include "topics/typedef_tutorial.h"
+#include "topics/operators_tutorial.h"
 using namespace std;
 
 
@@ -14,7 +15,8 @@ struct label_tutorial {
 // all the labels for the tutorial 
 label_tutorial all_tutorial_labels[] = { 
 	{1, "namespaces"},
-	{2, "typedefs"}
+	{2, "typedefs"},
+	{3, "operators (some notes)"}
 };
 
 // length of the label tutorial
@@ -49,6 +51,12 @@ void tutorial_selector(int selection) {
 			cout << tutorial_descrition << "\n";
 			all_descriptions = typedef_descriptor_tutorial();
 			break;
+		}
+		case 3: {
+			using namespace operators_tutorial;
+			cout << tutorial_title << "\n";
+			cout << tutorial_descrition << "\n";
+			all_descriptions = operator_descriptor_tutorial();
 		}
 	}
 	cout << "\n\n----------\n\n";
