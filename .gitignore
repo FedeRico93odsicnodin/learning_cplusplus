@@ -40,3 +40,6 @@ x64
 *.log
 *.idb
 *.ilk
+
+# other features: git rm -r . --cached
+# ignore and untrack items by VS
