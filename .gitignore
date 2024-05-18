@@ -31,6 +31,12 @@
 *.out
 *.app
 
+x64
 .vs
 *.tlog
 *pdb
+*.tlog
+*.pdb
+*.log
+*.idb
+*.ilk

@@ -22,7 +22,7 @@ namespace arithmetics_tutorial {
     string tutorial_description = "just a bref reminder on arithmetics in C++";
 }
 
-// tutorial on memory addresses 
+// tutorial on memory addresses federi
 std::vector<std::string> memoryaddress_tutorial() {
     std::vector<std::string> all_descriptions;
 
