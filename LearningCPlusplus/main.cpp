@@ -18,7 +18,8 @@ label_tutorial all_tutorial_labels[] = {
 	{1, "namespaces"},
 	{2, "typedefs"},
 	{3, "operators (some notes)"},
-	{4, "arithmetics"}
+	{4, "arithmetics"},
+	{5, "memory tutorial"}
 };
 
 // length of the label tutorial
@@ -66,6 +67,13 @@ void tutorial_selector(int selection) {
 			cout << tutorial_title << "\n";
 			cout << tutorial_description << "\n";
 			all_descriptions = arithmetics_descriptor_tutorial();
+			break;
+		}
+		case 5: {
+			using namespace memoryaddress_tutorial;
+			cout << tutorial_title << "\n";
+			cout << tutorial_description << "\n";
+			all_descriptions = memoryaddress_descriptor_tutorial();
 			break;
 		}
 	}
